@@ -1,6 +1,6 @@
 --[[
 
-    Im you don't know anything about Lua, I recommend taking some time to read through
+    If you don't know anything about Lua, I recommend taking some time to read through
     a guide. One possible example which will only take 10-15 minutes:
       - https://learnxinyminutes.com/docs/lua/
 

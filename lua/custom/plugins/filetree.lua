@@ -10,6 +10,7 @@ return {
   },
   config = function()
     require('neo-tree').setup {
+      close_if_last_window = true,
       filesystem = {
         follow_current_file = true,
         filtered_items = {
@@ -18,6 +19,11 @@ return {
           hide_dotfiles = false,
           hide_gitignore = false,
         },
+      },
+      window = {
+        position = 'right',
+        width = 25,
+        auto_expand_width = true,
       },
     }
   end,

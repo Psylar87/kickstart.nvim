@@ -26,13 +26,6 @@ return {
         width = 25,
         auto_expand_width = true,
       },
-      default_component_configs = {
-        container = {
-          enable_character_fade = true,
-          width = '100%',
-          right_padding = 0,
-        },
-      },
     }
   end,
 }

@@ -118,7 +118,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Map <C-n> to toggle Neotree
-vim.keymap.set('n', '<C-n>', ':Neotree<CR>', { desc = 'Opens Neotree' })
+vim.keymap.set('n', '<C-f>', ':Neotree<CR>', { desc = 'Opens Neotree' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

@@ -23,7 +23,7 @@ return {
       },
       window = {
         position = 'right',
-        width = 25,
+        width = 27,
         auto_expand_width = true,
       },
     }

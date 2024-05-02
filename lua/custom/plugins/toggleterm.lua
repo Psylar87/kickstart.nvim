@@ -4,7 +4,7 @@ return {
     version = '*',
     opts = {
       open_mapping = [[<c-\>]],
-      size = 20,
+      size = 10,
       hide_numbers = true, -- hide the number column in toggleterm buffers
       shade_filetypes = {}, -- this table is to disable filetype highlights for this terminal, add to it if you want more to be disabled
       shade_terminals = false, -- NOTE: this option takes priority over highlights specified so if you specify Normal highlights you should set this to false.

@@ -12,7 +12,7 @@ return {
       start_in_insert = true,
       persist_size = true, -- persist size when hidden
       close_on_exit = true, -- close on exit
-      direction = 'horizontal', -- | 'horizontal' | 'vertical' | 'tab' | 'float',
+      direction = 'float', -- | 'horizontal' | 'vertical' | 'tab' | 'float',
       float_opts = {
         border = 'curved', -- | 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
         winblend = 10, -- transparency

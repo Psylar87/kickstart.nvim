@@ -226,20 +226,35 @@ require('lazy').setup({
   -- after the plugin has been loaded:
   --  config = function() ... end
 
-  { -- Useful plugin to show you pending keybinds.
+  {
     'folke/which-key.nvim',
-    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-    config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
+    event = 'VimEnter',
+    config = function()
+      local wk = require 'which-key'
 
-      -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+      wk.setup {
+        -- Your which-key setup options here (if any)
       }
+
+      -- Set the leader key
+      vim.g.mapleader = ' ' -- Set space as the leader key
+
+      -- Define and set your keymaps
+      vim.keymap.set('n', '<leader>c', function()
+        wk.show('c', { mode = 'n', auto = true })
+      end, { desc = '[C]ode' })
+      vim.keymap.set('n', '<leader>d', function()
+        wk.show('d', { mode = 'n', auto = true })
+      end, { desc = '[D]ocument' })
+      vim.keymap.set('n', '<leader>r', function()
+        wk.show('r', { mode = 'n', auto = true })
+      end, { desc = '[R]ename' })
+      vim.keymap.set('n', '<leader>s', function()
+        wk.show('s', { mode = 'n', auto = true })
+      end, { desc = '[S]earch' })
+      vim.keymap.set('n', '<leader>w', function()
+        wk.show('w', { mode = 'n', auto = true })
+      end, { desc = '[W]orkspace' })
     end,
   },
 

@@ -4,7 +4,7 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        theme = 'auto', -- 'gruvbox', 'nord', 'dracula', etc.
+        theme = 'auto',
         icons_enabled = true,
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
@@ -30,7 +30,7 @@ return {
         lualine_c = {
           {
             'filename',
-            path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+            path = 1,
             symbols = {
               modified = '[+]',
               readonly = '[-]',
@@ -39,16 +39,21 @@ return {
           },
         },
         lualine_x = {
-          'encoding',
           {
             'fileformat',
             symbols = {
               unix = '', -- mac/unix systems
               dos = '', -- windows
-              mac = '', -- explicit mac symbol if you prefer
+              mac = '', -- explicit mac symbol
             },
+            padding = { left = 1, right = 1 },
           },
-          'filetype',
+          'encoding',
+          {
+            'filetype',
+            icon_only = false, -- set to true if you only want the icon
+            padding = { left = 1, right = 1 },
+          },
         },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },

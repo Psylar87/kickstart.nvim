@@ -1,5 +1,3 @@
--- lualine plugin
-
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -40,7 +38,18 @@ return {
             },
           },
         },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
+        lualine_x = {
+          'encoding',
+          {
+            'fileformat',
+            symbols = {
+              unix = '', -- mac/unix systems
+              dos = '', -- windows
+              mac = '', -- explicit mac symbol if you prefer
+            },
+          },
+          'filetype',
+        },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },

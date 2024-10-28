@@ -1,10 +1,18 @@
 return {
-
   { -- Linting
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
+
+      -- Configure markdownlint to disable line-length warnings
+      lint.linters.markdownlint.args = {
+        '--config',
+        vim.fn.json_encode {
+          MD013 = false, -- Disable line length warnings
+        },
+      }
+
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
       }

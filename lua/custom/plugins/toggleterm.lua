@@ -4,7 +4,7 @@ return {
     version = '*',
     opts = {
       open_mapping = [[<c-\>]],
-      size = 15,
+      size = math.floor(vim.o.lines * 0.2),
       hide_numbers = true,
       shade_filetypes = {},
       shade_terminals = true,
@@ -15,22 +15,12 @@ return {
       direction = 'horizontal',
       float_opts = {
         border = 'curved',
-        winblend = 80,
+        winblend = 10,
         highlights = {
           border = 'Normal',
           background = 'Normal',
         },
       },
     },
-    config = function(_, opts)
-      require('toggleterm').setup(opts)
-      vim.api.nvim_create_autocmd('TermOpen', {
-        pattern = 'term://*toggleterm#*',
-        callback = function()
-          vim.cmd 'setlocal winblend=30'
-          vim.cmd 'setlocal winhl=Normal:Normal'
-        end,
-      })
-    end,
   },
 }

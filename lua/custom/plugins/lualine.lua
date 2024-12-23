@@ -51,7 +51,7 @@ return {
           'encoding',
           {
             'filetype',
-            icon_only = false, -- set to true if you only want the icon
+            icon_only = true, -- set to true if you only want the icon
             padding = { left = 1, right = 1 },
           },
         },
